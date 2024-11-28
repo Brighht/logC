@@ -1,4 +1,4 @@
-# Efficient File Parser in C
+# Efficient Config/log File Parser in C
 
 ## Overview
 This project is a high-performance file parser written in C, designed to process and analyze large log files efficiently. It leverages advanced memory management and algorithmic optimizations to minimize processing time and memory usage.
