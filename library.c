@@ -3,15 +3,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <errno.h>
 
 void process_line(char *line);
-void analyze_line(char *line);
+void analyze_line(const char *line);
 
 int main(int const argc, char ** argv) {
+    /* clear buff */
+    setbuf(stdout, NULL);
+    setbuf(stderr, NULL);
+
     if (argc != 2) {
         printf("Usage: ./logfile <%s>\n", argv[0]);
         return EXIT_FAILURE;
     }
+
 
     FILE *logfile = fopen(argv[1], "r");
     if (logfile == NULL) {
