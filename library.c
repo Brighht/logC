@@ -25,6 +25,7 @@ int main(int const argc, char ** argv) {
         return EXIT_FAILURE;
     }
 
+    int errCount ,infoCount = 0;
     //initialize line variable
     char line[1024];
     while (fgets(line, sizeof(line), logfile)) {
@@ -45,10 +46,12 @@ int main(int const argc, char ** argv) {
 void analyze_line(const char *line) {
     // Example: Check for a specific keyword in the line
     if (strstr(line, "ERROR")) {
+        int errC = 0;
         printf("[ALERT] Found an error: %s\n", line);
         //todo: ERROR logic here
     }
     else if (strstr(line, "INFO")) {
+        int infoC = 0;
         printf("[INFO] General information: %s\n", line);
         //todo: INFO logic here
     }
