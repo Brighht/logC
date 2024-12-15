@@ -7,9 +7,18 @@
 
 void process_line(char *line);
 void analyze_line(const char *line);
+
 int containsError(const char *line){
     return strstr(line, "ERROR") != NULL;
 };
+
+int containsAlert(const char *line){
+    return strstr(line, "ALERT") != NULL;
+}
+
+int containsInfo(const char *line){
+    return strstr(line, "INFO") != NULL;
+}
 
 int main(int const argc, char ** argv) {
     /* clear buff */
@@ -23,8 +32,6 @@ int main(int const argc, char ** argv) {
         printf("Usage: ./logfile <%s>\n", argv[0]);
         return EXIT_FAILURE;
     }
-
-
     FILE *logfile = fopen(inputfile, "r");
     if (logfile == NULL) {
         perror("Error opening file");
@@ -66,7 +73,7 @@ void analyze_line(const char *line) {
             printf("[ALERT] Found an error: %s\n", line);
             //todo: ERROR logic here
         }
-        else if (strstr(line, "INFO")) {
+        else if (containsInfo(line)) {
             int infoC = 0;
             printf("[INFO] General information: %s\n", line);
             //todo: INFO logic here
