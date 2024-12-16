@@ -12,9 +12,9 @@ int containsError(const char *line){
     return strstr(line, "ERROR") != NULL;
 };
 
-int containsAlert(const char *line){
-    return strstr(line, "ALERT") != NULL;
-}
+// int containsAlert(const char *line){
+//     return strstr(line, "ALERT") != NULL;
+// }
 
 int containsInfo(const char *line){
     return strstr(line, "INFO") != NULL;
