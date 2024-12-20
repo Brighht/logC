@@ -21,7 +21,7 @@ int containsInfo(const char *line){
 }
 
 int main(int const argc, char ** argv) {
-    /* clear buff */
+    /* clear buff for stdout and stderr*/
     setbuf(stdout, NULL);
     setbuf(stderr, NULL);
 
@@ -50,6 +50,13 @@ int main(int const argc, char ** argv) {
     while (fgets(line, sizeof(line), logfile)) {
         process_line(line);
     }
+    while(1){
+        if(feof(logfile)) break;{
+        //print output into output file
+            fprintf(logOutput, "%s", logfile);
+        }
+    }
+    
 
     //close logfile
     fclose(logfile);
