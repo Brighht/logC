@@ -34,7 +34,7 @@ int main(int const argc, char ** argv) {
     }
     FILE *logfile = fopen(inputfile, "r");
     if (logfile == NULL) {
-        perror("Error opening file");
+        fprintf(stderr,"%s\n", strerror(errno));
         return EXIT_FAILURE;
     }
 
@@ -74,7 +74,7 @@ int main(int const argc, char ** argv) {
 void analyze_line(const char *line) {
     size_t errCount = 0;
     // Example: Check for a specific keyword in the line
-    for(size_t i = 0; i < strlen(line); i++){
+    for(int i = 0; i < strlen(line); i++){
         if (containsError(line)) {
             errCount++;
             printf("[ALERT] Found an error: %s\n", line);
