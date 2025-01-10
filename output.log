@@ -1,0 +1,16 @@
+[2024-03-14 10:15:30][ERROR] Database connection failed - timeout
+[2024-03-14 10:15:31][WARNING] Retry attempt 1 for database connection
+[2024-03-14 10:15:32][INFO] System initialization started
+[2024-03-14 10:15:33][DEBUG] Checking configuration files
+[2024-03-14 10:15:34][ERROR] Authentication failed for user 'admin'
+[2024-03-14 10:15:35][INFO] Backup process started
+[2024-03-14 10:15:36][WARNING] High memory usage detected (85%)
+
+=== Log Analysis Summary ===
+Analysis Duration: 0 seconds
+Total Errors: 2
+Total Warnings: 2
+Total Info Messages: 2
+Total Debug Messages: 1
+Total Messages: 7
+======================== 
