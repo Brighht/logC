@@ -108,22 +108,8 @@ The parser handles various error conditions:
 4. Push to the branch
 5. Create a Pull Request
 
-## Testing
-Run the included test suite:
-```bash
-./test_parser sample.log
-```
-
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Author
-[Your Name]
-
-## Acknowledgments
-- Thanks to contributors and testers
-- Inspired by real-world log processing challenges
-- Built with performance and reliability in mind
-
-## Support
-For support, please open an issue in the GitHub repository or contact the maintainers.
+Bright Andoh
